@@ -1,0 +1,76 @@
+/**
+ * @name    s-color-picker
+ * Generate all the classes needed to style the s-color-picker component and make it fit with the general look and feel of your website
+ *
+ * @example   html
+ * <div class="form-group">
+ *  <input type="text" name="color" id="color" placeholder="#ff0000" />
+ *  <s-color-picker for="color"></s-color-picker>
+ * </div>
+ *
+ * @author    Olivier Bossel <olivier.bossel@gmail.com>
+ */
+@import 'node_modules/coffeekraken-s-button-component/index';
+
+/**
+ * Print out the bare and style component css
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-color-picker-classes(
+  $colors: default primary secondary
+) {
+  @include s-color-picker-classes-bare();
+  @include s-color-picker-classes-style($colors);
+}
+
+/**
+ * Print out the bare component css
+ */
+@mixin s-color-picker-classes-bare() {
+  @include s-component('s-color-picker') {
+    #{s-component()} {
+      width: 1em + s-lnf(padding-vertical) * 2;
+      height: 1em + s-lnf(padding-horizontal) * 2;
+      flex: 0 0 auto !important;
+      cursor: pointer;
+    }
+
+    .pcr-app {
+      @include s-depth(6);
+    }
+  }
+}
+
+/**
+ * Print out the style component css
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-color-picker-classes-style(
+  $colors: default primary secondary
+) {
+  @include s-component('s-color-picker') {
+    .pcr-app .pcr-clear {
+      background: s-color(error) !important;
+    }
+
+    @each $color in $colors {
+      $sel : '.pcr-app[color="#{$color}"]';
+
+      @if $color == default {
+        $sel : ".pcr-app";
+      }
+
+      #{$sel} {
+        .pcr-save,
+        .pcr-type {
+          background: s-color($color) !important;
+          color: white !important;
+
+          &.active {
+            background: s-color($color, -darken 10%) !important;
+          }
+        }
+      }
+    }
+  }
+}
