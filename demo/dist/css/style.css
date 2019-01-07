@@ -5136,7 +5136,7 @@ s-color-picker {
 
 .pcr-app .pcr-save.active,
 .pcr-app .pcr-type.active {
-  background: #6b7477 !important;
+  background: #535a5c !important;
 }
 
 .pcr-app[color="primary"] .pcr-save,
@@ -5147,7 +5147,7 @@ s-color-picker {
 
 .pcr-app[color="primary"] .pcr-save.active,
 .pcr-app[color="primary"] .pcr-type.active {
-  background: #dca40e !important;
+  background: #ac810b !important;
 }
 
 .pcr-app[color="secondary"] .pcr-save,
@@ -5158,7 +5158,7 @@ s-color-picker {
 
 .pcr-app[color="secondary"] .pcr-save.active,
 .pcr-app[color="secondary"] .pcr-type.active {
-  background: #15191b !important;
+  background: black !important;
 }
 
 body {
