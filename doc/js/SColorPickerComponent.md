@@ -20,6 +20,15 @@ Type : **{ [Boolean](https://developer.mozilla.org/fr/docs/Web/JavaScript/Refere
 Default : **false**
 
 
+## swatches
+
+Specify some color to choose from
+
+Type : **{ Array<Color> }**
+
+Default : **null**
+
+
 ## hue
 
 Activate the hue selector
