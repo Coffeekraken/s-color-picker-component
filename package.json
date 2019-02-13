@@ -1,6 +1,6 @@
 {
   "name": "coffeekraken-s-color-picker-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Provide a nice color picker component. This is a wrapper for the nice pickr library.",
   "main": "dist/index.js",
   "homepage": "http://coffeekraken.io",
@@ -41,8 +41,7 @@
     "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
   },
   "pre-commit": [
-    "test",
-    "lint"
+    "test"
   ],
   "keywords": [
     "color",
@@ -75,7 +74,7 @@
     "coffeekraken-sugar": "^1.0.34",
     "coffeekraken-s-form-component": "^1.0.3",
     "coffeekraken-s-typography-component": "^1.0.1",
-    "pickr-widget": "^0.3.2"
+    "pickr-widget": "^0.3.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
